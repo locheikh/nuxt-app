@@ -1,3 +1,17 @@
+<script setup>
+ import Produit from '@/components/Produit.vue';
+        const produits = [{
+            name: 'pizza', price: 2.00
+        },{
+            name: 'choux', price: 3.00
+        }];
+
+        const commandes = await useFetch('/api/commandes');     
+
+</script>
+
+
+
 <template>
 <div>
 <!--  <Navbar/> -->
@@ -21,38 +35,7 @@
 </div>
 </template>
 
-<script>
-/* import Produit from '@/components/Produit.vue' */
-export default {
-    
-  data(){
-      return {
-        produits:[{
-            name: 'pizza', price: 2.00
-        },{
-            name: 'choux', price: 3.00
-        }],
-        commandes: ''
-      }
-  },
 
-async mounted() {
-  this.getIncidents ();
-},
-methods:{
-  async getIncidents(){
-    console.log('iccccci hetIncidents');
-    this.commandes = await useFetch('/api/commandes');
-    //const value = await this.$axios.$get('http://localhost:3000/test')
-    //this.value = value
-   // console.log(value)
-  }
-}
-
-
-}
-
-</script>
 
 <style scopted>
 
