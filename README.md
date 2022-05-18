@@ -22,8 +22,18 @@ pnpm install --shamefully-hoist
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+npm run dev -- -o
 ```
+
+https://www.youtube.com/watch?v=NPJms-kg2F8&list=PL8Azg5184hTAg-HoFByqlA43EmyREWCge&index=4
+npm install -g sequelize-cli
+npm install --save sequelize
+npm install --save mysql2
+cd .\server\ 
+sequelize init
+sequelize model:create --attributes "email:string ..." --name user
+Modifier migrations
+Modifier model pour les relations
 
 ## Production
 
