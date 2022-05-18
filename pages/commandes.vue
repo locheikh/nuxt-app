@@ -6,7 +6,13 @@
             name: 'choux', price: 3.00
         }];
 
-        const commandes = await useFetch('/api/commandes');     
+        const commandes = await useFetch('/api/commandes');
+
+  // Define params wherever, through `defineProps()`, `useRoute()`, etc.
+ // const { data: post, refresh } = await useAsyncData('post', () => $fetch(`https://api.nuxtjs.dev/posts/${params.id}`) )
+  // Or instead - useFetch is a convenience wrapper around useAsyncData when you're just performing a simple fetch
+ // const { data: post, refresh } = await useFetch(`https://api.nuxtjs.dev/posts/${paramsÌ.id}`)
+
 
 </script>
 
